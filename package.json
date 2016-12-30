@@ -2,7 +2,9 @@
   "name": "couch-publication-manager",
   "version": "1.1.0",
   "description": "CLI to publish to a CouchDB site",
-  "bin": "bin.js",
+  "bin": {
+    "couchpm": "bin.js"
+  },
   "repository": {
     "url": "http://github.com/savelbr/couch-publication-manager",
     "type": "git"
