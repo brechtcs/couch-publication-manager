@@ -1,0 +1,17 @@
+{
+  "name": "couch-publication-manager",
+  "version": "1.0.0",
+  "description": "CLI to publish to a CouchDB site",
+  "bin": "bin.js",
+  "repository": {
+    "url": "http://github.com/savelbr/couch-publication-manager",
+    "type": "git"
+  },
+  "author": "Brecht Savelkoul <brecht.savelkoul@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "pouchdb-http": "^6.0.2",
+    "prompt": "^1.0.0",
+    "xtend": "^4.0.1"
+  }
+}
