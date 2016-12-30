@@ -16,7 +16,7 @@ if (process.argv.length > 2) {
   content = marked(file.toString())
 }
 else {
-  console.error('Error: lease specify input file')
+  console.error('Error: Please specify input file')
   process.exit(1)
 }
 
