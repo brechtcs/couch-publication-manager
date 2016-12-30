@@ -30,7 +30,7 @@ const fields = [
   {name: 'username', type: 'string'},
   {name: 'password', type: 'string', hidden: true},
   {name: 'type', type: 'string', required: true, message: 'Please select a type for your entry (for example: page, post, etc.)'},
-  {name: 'slug', type: 'string', default: process.argv[process.argv.length - 1]},
+  {name: 'slug', type: 'string', default: getDefaultSlug()},
   {name: 'title', type: 'string', required: true, message: 'Entry title is required (see: https://en.wikipedia.org/wiki/RSS#RSS_compared_to_Atom)'},
   {name: 'author', type: 'string', required: true, message: 'Entry author is required (see: https://en.wikipedia.org/wiki/RSS#RSS_compared_to_Atom)'},
   {name: 'subtitle', type: 'string'},
@@ -79,4 +79,16 @@ prompt.get(fields, function(err, result) {
  */
 function now() {
   return new Date().getTime()
+}
+
+/**
+ * Helper function to get default slug
+ * by removing common extensions
+ * from input file name
+ */
+function getDefaultSlug() {
+  return process.argv[process.argv.length - 1].
+    replace(/\.md$/, '').
+    replace(/\.markdown$/, '').
+    replace(/\.txt$/, '')
 }
