@@ -56,6 +56,7 @@ prompt.get(fields, function(err, result) {
   }})
 
   result._id = result.slug
+  result.authors = [result.author]
   result.content = content
   result.updated = now()
 
@@ -64,6 +65,7 @@ prompt.get(fields, function(err, result) {
   delete result.username
   delete result.password
   delete result.slug
+  delete result.author
 
   couch.put(result).
     then(_ => console.info('Published!')).
