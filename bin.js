@@ -1,7 +1,6 @@
 #!/usr/bin/node
 
 const fs = require('fs')
-const marked = require('marked')
 const PouchDB = require('pouchdb-http')
 const prompt = require('prompt')
 const xtend = require('xtend')
@@ -13,7 +12,7 @@ let content
 
 if (process.argv.length > 2) {
   const file = fs.readFileSync(process.argv[process.argv.length - 1])
-  content = marked(file.toString())
+  content = file.toString()
 }
 else {
   console.error('Error: Please specify input file')
