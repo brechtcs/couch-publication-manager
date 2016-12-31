@@ -39,6 +39,7 @@ const fields = [
 
 prompt.message = 'couch.pm'
 prompt.delimiter = ' -> '
+prompt.colors = false;
 prompt.start();
 
 /**
@@ -67,12 +68,11 @@ prompt.get(fields, function(err, result) {
   delete result.slug
   delete result.author
 
-  couch.put(result).
-    then(_ => console.info('Published!')).
-    catch(_ => couch.get(result._id)).
+  couch.get(result._id).
+    catch(_ => result).
     then(doc => xtend(doc, result)).
     then(entry => couch.put(entry)).
-    then(_ => console.info('Updated!')).
+    then(_ => console.info('couch.pm -> posted!')).
     catch(console.error)
 })
 

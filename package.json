@@ -1,6 +1,6 @@
 {
   "name": "couch-publication-manager",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "CLI to publish to a CouchDB site",
   "bin": {
     "couchpm": "bin.js"
