@@ -1,9 +1,9 @@
 {
   "name": "couch-publication-manager",
-  "version": "3.1.0",
+  "version": "4.0.0",
   "description": "CLI to publish to a CouchDB site",
   "bin": {
-    "couchpm": "bin.js"
+    "couch-atom": "bin/atom.js"
   },
   "repository": {
     "url": "http://github.com/savelbr/couch-publication-manager",
@@ -12,8 +12,12 @@
   "author": "Brecht Savelkoul <brecht.savelkoul@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "get-stdin": "^5.0.1",
+    "minimist": "^1.2.0",
     "pouchdb-http": "^6.0.2",
-    "prompt": "^1.0.0",
+    "read": "^1.0.7",
+    "shutdown-handler": "^1.0.1",
+    "ttys": "0.0.3",
     "xtend": "^4.0.1"
   }
 }
