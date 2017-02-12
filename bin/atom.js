@@ -29,6 +29,7 @@ then(function (content) {
  * Get existing or empty document from CouchDB
  */
 then(function (couch) {
+  console.log(couch)
   return ask({
     name: 'entry',
     default: argv.entry || argv.e
